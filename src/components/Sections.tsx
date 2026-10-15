@@ -65,12 +65,10 @@ export function Certifications() {
                 <button type="button" className="cert-thumb" onClick={() => setZoomed(c)} aria-label={fill(labels.enlarge, { name: c.name })}>
                   <img src={asset(c.image.src)} alt="" width="640" height="480" loading="lazy" decoding="async" />
                 </button>
-                <div className="cert-body">
-                  <p className="cert-name">{c.name}</p>
-                  <p className="meta">
-                    {c.issuer} · {c.date}
-                  </p>
-                </div>
+                <p className="cert-name">{c.name}</p>
+                <p className="meta">
+                  {c.issuer} · {c.date}
+                </p>
                 <ExternalLink className="text-link cert-verify" href={c.verifyUrl} ariaLabel={fill(labels.verifyAria, { name: c.name })}>
                   {labels.verify}
                   <Icon name="external" size={13} />
@@ -151,25 +149,45 @@ export function Contact() {
     <Section id="contact" title={contact.title} intro={contact.text}>
       <dl className="contact-list">
         <div className="contact-row">
-          <dt>{contact.emailLabel}</dt>
+          <dt>
+            <span className="contact-icon" aria-hidden="true">
+              <Icon name="mail" size={18} />
+            </span>
+            {contact.emailLabel}
+          </dt>
           <dd>
             <a href={`mailto:${links.email}`}>{links.email}</a>
           </dd>
         </div>
         <div className="contact-row">
-          <dt>{contact.phoneLabel}</dt>
+          <dt>
+            <span className="contact-icon" aria-hidden="true">
+              <Icon name="phone" size={18} />
+            </span>
+            {contact.phoneLabel}
+          </dt>
           <dd>
             <a href={`tel:${links.phone}`}>{links.phoneDisplay}</a>
           </dd>
         </div>
         <div className="contact-row">
-          <dt>{contact.linkedinLabel}</dt>
+          <dt>
+            <span className="contact-icon" aria-hidden="true">
+              <Icon name="linkedin" size={18} />
+            </span>
+            {contact.linkedinLabel}
+          </dt>
           <dd>
             <ExternalLink href={links.linkedin}>{links.linkedin.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, '')}</ExternalLink>
           </dd>
         </div>
         <div className="contact-row">
-          <dt>{contact.githubLabel}</dt>
+          <dt>
+            <span className="contact-icon" aria-hidden="true">
+              <Icon name="github" size={18} />
+            </span>
+            {contact.githubLabel}
+          </dt>
           <dd>
             <ExternalLink href={links.github}>{links.github.replace(/^https:\/\//, '')}</ExternalLink>
           </dd>

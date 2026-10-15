@@ -230,8 +230,22 @@ main:focus {
 
 /* ---------- Hero ---------- */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 96px 0 88px;
   border-bottom: 1px solid var(--rule);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 70%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent);
+}
+.hero-inner {
+  position: relative;
 }
 .hero-inner {
   display: grid;
@@ -283,10 +297,24 @@ main:focus {
   border-top: 1px solid var(--rule);
   font-size: 0.925rem;
 }
+.hero-photo {
+  position: relative;
+  margin: 8px 16px 16px 0;
+}
+.photo-frame {
+  position: absolute;
+  inset: 16px -16px -16px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
 .hero-photo img {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  padding: 8px;
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
   border-radius: 4px;
 }
 
@@ -378,15 +406,18 @@ main:focus {
 
 /* ---------- Projects ---------- */
 .projects > li + li {
-  margin-top: 40px;
-  padding-top: 40px;
   border-top: 1px solid var(--rule);
+}
+.projects > li + li {
+  margin-top: 56px;
+  padding-top: 56px;
 }
 .project {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 32px;
-  align-items: start;
+  gap: 24px;
+}
+.project-body {
+  max-width: 70ch;
 }
 .project-media img {
   width: 100%;
@@ -397,7 +428,7 @@ main:focus {
   border-radius: 4px;
 }
 .project-name {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 .project-name + .meta {
@@ -473,30 +504,32 @@ main:focus {
 
 /* ---------- Certifications ---------- */
 .cert-group + .cert-group {
-  margin-top: 44px;
+  margin-top: 56px;
 }
 .group-title {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: var(--faint);
   font-size: 0.8rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.cert {
+.certs {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: center;
-  padding: 14px 0;
-  border-top: 1px solid var(--rule);
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 32px 24px;
+  margin-top: 16px;
+}
+.cert {
+  display: flex;
+  flex-direction: column;
 }
 .cert-thumb {
   display: block;
-  width: 72px;
+  width: 100%;
   padding: 0;
   border: 1px solid var(--rule-strong);
-  border-radius: 2px;
+  border-radius: 4px;
   background: #fff;
   cursor: zoom-in;
   overflow: hidden;
@@ -504,18 +537,24 @@ main:focus {
 .cert-thumb img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  transition: transform 0.25s ease;
 }
-.cert-thumb:hover {
-  border-color: var(--muted);
+.cert-thumb:hover img {
+  transform: scale(1.03);
 }
 .cert-name {
+  margin-top: 14px;
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.4;
 }
+.cert .meta {
+  margin-top: 2px;
+}
 .cert-verify {
-  white-space: nowrap;
+  margin-top: 8px;
+  align-self: flex-start;
 }
 
 .lightbox {
@@ -602,8 +641,23 @@ main:focus {
   padding-top: 0;
 }
 .contact-row dt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   color: var(--muted);
   font-size: 0.95rem;
+}
+.contact-row {
+  align-items: center;
+}
+.contact-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+  color: var(--text);
 }
 .contact-row dd {
   font-size: 0.95rem;
@@ -680,7 +734,7 @@ main:focus {
   }
   .hero-photo {
     order: -1;
-    width: 132px;
+    width: 150px;
   }
   .section {
     padding: 56px 0;
@@ -694,14 +748,12 @@ main:focus {
     grid-template-columns: 1fr;
     gap: 2px;
   }
-  .cert {
-    grid-template-columns: 56px minmax(0, 1fr);
+  .certs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
   }
-  .cert-thumb {
-    width: 56px;
-  }
-  .cert-verify {
-    grid-column: 2;
+  .photo-frame {
+    inset: 10px -10px -10px 10px;
   }
   .edu {
     flex-direction: column;

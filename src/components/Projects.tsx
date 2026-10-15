@@ -11,9 +11,9 @@ export function Projects() {
           <li key={p.id} className="project">
             <div className="project-media">
               <img
-                src={asset(p.image.srcSmall)}
+                src={asset(p.image.src)}
                 srcSet={`${asset(p.image.srcSmall)} 720w, ${asset(p.image.src)} 1440w`}
-                sizes="(min-width: 1100px) 340px, (min-width: 760px) 40vw, 100vw"
+                sizes="(min-width: 1100px) 780px, 100vw"
                 alt={p.image.alt}
                 width={p.image.width}
                 height={p.image.height}

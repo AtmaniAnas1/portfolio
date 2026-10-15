@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { asset, useI18n } from '../i18n';
+import { HeroBackground } from './HeroBackground';
 import { ExternalLink, Icon } from './ui';
 
 /** "Download CV" button with a menu of the four versions (designed / ATS, English / French). */
@@ -51,6 +52,7 @@ export function Hero() {
   const { hero, links } = t;
   return (
     <section className="hero" aria-labelledby="hero-name">
+      <HeroBackground />
       <div className="container hero-inner">
         <div className="hero-text">
           <p className="eyebrow">
@@ -84,6 +86,7 @@ export function Hero() {
           </ul>
         </div>
         <figure className="hero-photo">
+          <span className="photo-frame" aria-hidden="true" />
           <img src={asset(hero.photo.srcLarge)} width="352" height="352" alt={hero.photo.alt} fetchPriority="high" />
         </figure>
       </div>
