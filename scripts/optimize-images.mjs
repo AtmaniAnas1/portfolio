@@ -17,6 +17,8 @@ const jobs = [
   // Portrait: 1x and 2x for the hero photo.
   ['photo/anas-atmani.jpg', 'images/anas-atmani.webp', { width: 176, height: 176 }],
   ['photo/anas-atmani.jpg', 'images/anas-atmani@2x.webp', { width: 352, height: 352 }],
+  // Portrait (4:5) for the hero.
+  ['photo/anas-atmani.jpg', 'images/anas-atmani-portrait.webp', { width: 560, height: 700, position: 'top', quality: 86 }],
 ];
 
 // Project screenshots: 1440×900 captures of each app running locally (16:10), large + small.

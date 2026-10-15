@@ -2,7 +2,7 @@
   "meta": {
     "lang": "en",
     "locale": "en_US",
-    "title": "Anas Atmani — Full Stack Developer (Java · Spring Boot · React)",
+    "title": "Anas Atmani | Full Stack Developer (Java, Spring Boot, React)",
     "description": "Portfolio of Anas Atmani, 5th-year engineering student at EMSI Rabat and full stack developer (Java, Spring Boot, React), seeking a PFE internship in Rabat, Casablanca or remote."
   },
   "ui": {
@@ -28,71 +28,48 @@
   },
   "hero": {
     "name": "Anas Atmani",
-    "title": "Full Stack Developer — Java · Spring Boot · React",
-    "tagline": "5th-year engineering student seeking a PFE (end-of-studies) internship · Rabat / Casablanca / Remote",
+    "title": "Full Stack Developer (Java, Spring Boot, React)",
+    "tagline": "Seeking an end-of-studies (PFE) internship in Rabat, Casablanca or remote.",
     "summary": "Fifth-year engineering student in Computer Systems and Digital Development at EMSI Rabat, focused on full stack development with Java / Spring Boot and React. Two internships on Moroccan public digital platforms (PortNet, DGI) in full stack development and test automation. Oracle Certified Java SE 17.",
     "photo": {
       "src": "images/anas-atmani.webp",
-      "srcLarge": "images/anas-atmani@2x.webp",
+      "srcLarge": "images/anas-atmani-portrait.webp",
       "alt": "Portrait of Anas Atmani in a suit and tie"
     },
     "cvLabel": "Download CV",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
-    "emailLabel": "Email",
-    "availability": "Open to a PFE internship",
-    "greeting": "Hi, I'm",
-    "projectsLabel": "View projects",
-    "stats": [
-      {
-        "value": "7",
-        "label": "projects on GitHub"
-      },
-      {
-        "value": "12",
-        "label": "certifications"
-      },
-      {
-        "value": "2",
-        "label": "internships"
-      },
-      {
-        "value": "2",
-        "label": "Oracle Professional certifications"
-      }
-    ],
     "cvMenuTitle": "Choose a version",
     "cvs": [
       {
-        "label": "CV — English",
-        "note": "Designed version, with photo",
+        "label": "CV, English",
+        "note": "Designed layout with photo",
         "file": "cv/Atmani_Anas_CV_EN.pdf",
         "downloadName": "Anas_Atmani_CV_EN.pdf",
         "lang": "EN"
       },
       {
-        "label": "CV — French",
-        "note": "Designed version, with photo",
+        "label": "CV, French",
+        "note": "Designed layout with photo",
         "file": "cv/Atmani_Anas_CV_FR.pdf",
         "downloadName": "Anas_Atmani_CV_FR.pdf",
         "lang": "FR"
       },
       {
-        "label": "ATS CV — English",
-        "note": "Plain layout, read by applicant tracking systems",
+        "label": "ATS CV, English",
+        "note": "Plain layout for applicant tracking systems",
         "file": "cv/Atmani_Anas_CV_ATS_EN.pdf",
         "downloadName": "Anas_Atmani_CV_ATS_EN.pdf",
         "lang": "EN"
       },
       {
-        "label": "ATS CV — French",
-        "note": "Plain layout, read by applicant tracking systems",
+        "label": "ATS CV, French",
+        "note": "Plain layout for applicant tracking systems",
         "file": "cv/Atmani_Anas_CV_ATS_FR.pdf",
         "downloadName": "Anas_Atmani_CV_ATS_FR.pdf",
         "lang": "FR"
       }
     ],
-    "phoneLabel": "Phone",
     "school": {
       "label": "Engineering student",
       "name": "EMSI Rabat",
@@ -109,12 +86,12 @@
   },
   "projects": {
     "title": "Projects",
-    "intro": "Seven projects, each one run locally for these screenshots. Source code on GitHub.",
+    "intro": "Screenshots are taken from each application running locally.",
     "labels": {
       "problem": "Problem",
       "contribution": "What I did",
       "stack": "Tech stack",
-      "code": "Code",
+      "code": "Source code",
       "demo": "Live demo",
       "codeAria": "Code: {name} on GitHub",
       "demoAria": "Live demo: {name}"
@@ -373,6 +350,19 @@
     "title": "Skills",
     "groups": [
       {
+        "name": "Programming languages",
+        "items": [
+          "Java",
+          "Python",
+          "C",
+          "C++",
+          "C#",
+          "JavaScript",
+          "TypeScript",
+          "PHP"
+        ]
+      },
+      {
         "name": "Back end",
         "items": [
           "Spring Boot",
@@ -423,38 +413,23 @@
         ]
       },
       {
-        "name": "Programming languages",
-        "items": [
-          "Java",
-          "Python",
-          "C",
-          "C++",
-          "C#",
-          "JavaScript",
-          "TypeScript",
-          "PHP"
-        ]
-      },
-      {
         "name": "Spoken languages",
         "items": [
-          "Arabic — Native",
-          "English — Fluent",
-          "French — Intermediate"
+          "Arabic (native)",
+          "English (fluent)",
+          "French (intermediate)"
         ]
       }
     ]
   },
   "certifications": {
     "title": "Certifications",
-    "intro": "12 certificates. Click one to enlarge it, or check it on the issuer's website.",
+    "intro": "Select a certificate to view it, or verify it on the issuer's website.",
     "labels": {
       "verify": "Verify",
       "verifyAria": "Verify: {name}",
-      "all": "All",
-      "oracle": "Oracle",
-      "coursera": "Coursera",
-      "filterAria": "Filter certifications",
+      "oracle": "Oracle certifications",
+      "coursera": "Coursera courses",
       "enlarge": "Enlarge certificate: {name}"
     },
     "items": [
@@ -616,14 +591,13 @@
   },
   "contact": {
     "title": "Contact",
-    "text": "Looking for a PFE intern in full stack development? I'd be glad to talk.",
+    "text": "I am looking for a PFE internship in full stack development. Feel free to reach out by email or phone.",
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
     "phoneLabel": "Phone"
   },
   "footer": {
-    "text": "© 2026 Anas Atmani",
-    "school": "Engineering student at EMSI Rabat"
+    "text": "© 2026 Anas Atmani. Engineering student at EMSI Rabat."
   }
 }

@@ -2,7 +2,7 @@
   "meta": {
     "lang": "fr",
     "locale": "fr_FR",
-    "title": "Anas Atmani — Développeur Full Stack (Java · Spring Boot · React)",
+    "title": "Anas Atmani | Développeur Full Stack (Java, Spring Boot, React)",
     "description": "Portfolio d'Anas Atmani, élève ingénieur en 5e année à l'EMSI Rabat et développeur Full Stack (Java, Spring Boot, React), à la recherche d'un stage PFE à Rabat, à Casablanca ou en télétravail."
   },
   "ui": {
@@ -28,71 +28,48 @@
   },
   "hero": {
     "name": "Anas Atmani",
-    "title": "Développeur Full Stack — Java · Spring Boot · React",
-    "tagline": "Élève ingénieur en 5e année à la recherche d'un stage PFE · Rabat / Casablanca / Télétravail",
+    "title": "Développeur Full Stack (Java, Spring Boot, React)",
+    "tagline": "Recherche un stage de fin d'études (PFE) à Rabat, à Casablanca ou en télétravail.",
     "summary": "Élève ingénieur en 5e année à l'EMSI Rabat, orienté développement Full Stack Java / Spring Boot et React. Deux stages sur des plateformes numériques publiques marocaines (PortNet, DGI), en développement Full Stack et en automatisation des tests. Certifié Oracle Java SE 17.",
     "photo": {
       "src": "images/anas-atmani.webp",
-      "srcLarge": "images/anas-atmani@2x.webp",
+      "srcLarge": "images/anas-atmani-portrait.webp",
       "alt": "Portrait d'Anas Atmani en costume et cravate"
     },
     "cvLabel": "Télécharger le CV",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
-    "emailLabel": "E-mail",
-    "availability": "Disponible pour un stage PFE",
-    "greeting": "Bonjour, je suis",
-    "projectsLabel": "Voir les projets",
-    "stats": [
-      {
-        "value": "7",
-        "label": "projets sur GitHub"
-      },
-      {
-        "value": "12",
-        "label": "certifications"
-      },
-      {
-        "value": "2",
-        "label": "stages"
-      },
-      {
-        "value": "2",
-        "label": "certifications Oracle Professional"
-      }
-    ],
     "cvMenuTitle": "Choisissez une version",
     "cvs": [
       {
-        "label": "CV — Anglais",
-        "note": "Version mise en page, avec photo",
+        "label": "CV, anglais",
+        "note": "Mise en page avec photo",
         "file": "cv/Atmani_Anas_CV_EN.pdf",
         "downloadName": "Anas_Atmani_CV_EN.pdf",
         "lang": "EN"
       },
       {
-        "label": "CV — Français",
-        "note": "Version mise en page, avec photo",
+        "label": "CV, français",
+        "note": "Mise en page avec photo",
         "file": "cv/Atmani_Anas_CV_FR.pdf",
         "downloadName": "Anas_Atmani_CV_FR.pdf",
         "lang": "FR"
       },
       {
-        "label": "CV ATS — Anglais",
-        "note": "Mise en page simple, lisible par les logiciels de recrutement",
+        "label": "CV ATS, anglais",
+        "note": "Mise en page simple pour les logiciels de recrutement",
         "file": "cv/Atmani_Anas_CV_ATS_EN.pdf",
         "downloadName": "Anas_Atmani_CV_ATS_EN.pdf",
         "lang": "EN"
       },
       {
-        "label": "CV ATS — Français",
-        "note": "Mise en page simple, lisible par les logiciels de recrutement",
+        "label": "CV ATS, français",
+        "note": "Mise en page simple pour les logiciels de recrutement",
         "file": "cv/Atmani_Anas_CV_ATS_FR.pdf",
         "downloadName": "Anas_Atmani_CV_ATS_FR.pdf",
         "lang": "FR"
       }
     ],
-    "phoneLabel": "Téléphone",
     "school": {
       "label": "Élève ingénieur",
       "name": "EMSI Rabat",
@@ -109,12 +86,12 @@
   },
   "projects": {
     "title": "Projets",
-    "intro": "Sept projets, chacun lancé en local pour ces captures. Code source sur GitHub.",
+    "intro": "Captures réalisées sur chaque application lancée en local.",
     "labels": {
       "problem": "Problème",
       "contribution": "Ce que j'ai fait",
       "stack": "Technologies",
-      "code": "Code",
+      "code": "Code source",
       "demo": "Démo",
       "codeAria": "Code : {name} sur GitHub",
       "demoAria": "Démo : {name}"
@@ -373,6 +350,19 @@
     "title": "Compétences",
     "groups": [
       {
+        "name": "Langages de programmation",
+        "items": [
+          "Java",
+          "Python",
+          "C",
+          "C++",
+          "C#",
+          "JavaScript",
+          "TypeScript",
+          "PHP"
+        ]
+      },
+      {
         "name": "Back end",
         "items": [
           "Spring Boot",
@@ -423,38 +413,23 @@
         ]
       },
       {
-        "name": "Langages de programmation",
-        "items": [
-          "Java",
-          "Python",
-          "C",
-          "C++",
-          "C#",
-          "JavaScript",
-          "TypeScript",
-          "PHP"
-        ]
-      },
-      {
         "name": "Langues",
         "items": [
-          "Arabe — Langue maternelle",
-          "Anglais — Courant",
-          "Français — Intermédiaire"
+          "Arabe (langue maternelle)",
+          "Anglais (courant)",
+          "Français (intermédiaire)"
         ]
       }
     ]
   },
   "certifications": {
     "title": "Certifications",
-    "intro": "12 certificats. Cliquez pour agrandir, ou vérifiez-les sur le site de l'organisme.",
+    "intro": "Cliquez sur un certificat pour l'afficher, ou vérifiez-le sur le site de l'organisme.",
     "labels": {
       "verify": "Vérifier",
       "verifyAria": "Vérifier : {name}",
-      "all": "Tous",
-      "oracle": "Oracle",
-      "coursera": "Coursera",
-      "filterAria": "Filtrer les certifications",
+      "oracle": "Certifications Oracle",
+      "coursera": "Cours Coursera",
       "enlarge": "Agrandir le certificat : {name}"
     },
     "items": [
@@ -616,14 +591,13 @@
   },
   "contact": {
     "title": "Contact",
-    "text": "Vous cherchez un stagiaire PFE en développement Full Stack ? Je serais ravi d'en discuter.",
+    "text": "Je recherche un stage PFE en développement Full Stack. N'hésitez pas à me contacter par email ou par téléphone.",
     "emailLabel": "E-mail",
     "linkedinLabel": "LinkedIn",
     "githubLabel": "GitHub",
     "phoneLabel": "Téléphone"
   },
   "footer": {
-    "text": "© 2026 Anas Atmani",
-    "school": "Élève ingénieur à l'EMSI Rabat"
+    "text": "© 2026 Anas Atmani. Élève ingénieur à l'EMSI Rabat."
   }
 }

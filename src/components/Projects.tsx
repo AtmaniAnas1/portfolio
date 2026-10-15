@@ -1,65 +1,48 @@
 import { asset, fill, useI18n } from '../i18n';
-import { ExternalLink, Icon, Reveal, Section, Tags, shown } from './ui';
+import { ExternalLink, Icon, Section, Stack, shown } from './ui';
 
 export function Projects() {
   const { t } = useI18n();
   const { labels } = t.projects;
   return (
-    <Section id="projects" index="01" title={t.projects.title} intro={t.projects.intro}>
+    <Section id="projects" title={t.projects.title} intro={t.projects.intro}>
       <ol className="projects">
         {t.projects.items.map((p, i) => (
-          <Reveal as="li" key={p.id} className="project">
-            <figure className="browser">
-              <div className="browser-bar" aria-hidden="true">
-                <span className="dot" />
-                <span className="dot" />
-                <span className="dot" />
-                <span className="browser-url">{p.name}</span>
-              </div>
+          <li key={p.id} className="project">
+            <div className="project-media">
               <img
-                src={asset(p.image.src)}
+                src={asset(p.image.srcSmall)}
                 srcSet={`${asset(p.image.srcSmall)} 720w, ${asset(p.image.src)} 1440w`}
-                sizes="(min-width: 960px) 600px, 100vw"
+                sizes="(min-width: 1100px) 340px, (min-width: 760px) 40vw, 100vw"
                 alt={p.image.alt}
                 width={p.image.width}
                 height={p.image.height}
                 loading={i < 2 ? 'eager' : 'lazy'}
                 decoding="async"
               />
-            </figure>
+            </div>
             <div className="project-body">
-              <p className="project-meta">
-                <span className="project-num">{String(i + 1).padStart(2, '0')}</span>
-                {shown(p.context, p.period).join(' · ')}
-              </p>
               <h3 className="project-name">{p.name}</h3>
-              <dl className="project-details">
-                <div>
-                  <dt>{labels.problem}</dt>
-                  <dd>{p.problem}</dd>
-                </div>
-                <div>
-                  <dt>{labels.contribution}</dt>
-                  <dd>{p.contribution}</dd>
-                </div>
-              </dl>
-              <Tags items={p.stack} label={labels.stack} />
-              <div className="project-links">
+              <p className="meta">{shown(p.context, p.period).join(' · ')}</p>
+              <p className="project-text">{p.problem}</p>
+              <p className="project-text">{p.contribution}</p>
+              <Stack items={p.stack} label={labels.stack} />
+              <p className="project-links">
                 {p.links.code && (
-                  <ExternalLink className="btn btn-sm" href={p.links.code} ariaLabel={fill(labels.codeAria, { name: p.name })}>
-                    <Icon name="github" />
+                  <ExternalLink className="text-link" href={p.links.code} ariaLabel={fill(labels.codeAria, { name: p.name })}>
                     {labels.code}
+                    <Icon name="external" size={13} />
                   </ExternalLink>
                 )}
                 {p.links.demo && (
-                  <ExternalLink className="btn btn-sm btn-primary" href={p.links.demo} ariaLabel={fill(labels.demoAria, { name: p.name })}>
-                    <Icon name="external" />
+                  <ExternalLink className="text-link" href={p.links.demo} ariaLabel={fill(labels.demoAria, { name: p.name })}>
                     {labels.demo}
+                    <Icon name="external" size={13} />
                   </ExternalLink>
                 )}
-              </div>
+              </p>
             </div>
-          </Reveal>
+          </li>
         ))}
       </ol>
     </Section>
