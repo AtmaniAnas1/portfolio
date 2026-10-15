@@ -231,7 +231,6 @@ main:focus {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  overflow: hidden;
   padding: 96px 0 88px;
   border-bottom: 1px solid var(--rule);
 }
@@ -246,6 +245,7 @@ main:focus {
 }
 .hero-inner {
   position: relative;
+  z-index: 2; /* above the next sections, so the CV menu is never covered */
 }
 .hero-inner {
   display: grid;
