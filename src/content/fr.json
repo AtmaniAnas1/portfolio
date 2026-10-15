@@ -16,9 +16,7 @@
     "menu": "Menu",
     "closeMenu": "Fermer le menu",
     "close": "Fermer",
-    "backToTop": "Retour en haut",
-    "themeToLight": "Passer en thème clair",
-    "themeToDark": "Passer en thème sombre"
+    "backToTop": "Retour en haut"
   },
   "nav": {
     "projects": "Projets",

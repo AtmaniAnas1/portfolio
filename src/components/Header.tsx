@@ -3,15 +3,6 @@ import { useI18n } from '../i18n';
 import { Icon } from './ui';
 
 const SECTIONS = ['projects', 'experience', 'skills', 'certifications', 'education', 'contact'] as const;
-type Theme = 'light' | 'dark';
-const THEME_KEY = 'portfolio-theme';
-
-function currentTheme(): Theme {
-  const set = document.documentElement.dataset.theme;
-  if (set === 'light' || set === 'dark') return set;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-
 /** Highlights the nav link of the section currently in view. */
 function useActiveSection() {
   const [active, setActive] = useState<string | null>(null);
@@ -34,7 +25,6 @@ function useActiveSection() {
 
 export function Header() {
   const { t, toggle } = useI18n();
-  const [theme, setTheme] = useState<Theme>(currentTheme);
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useActiveSection();
@@ -52,19 +42,6 @@ export function Header() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
-
-  const switchTheme = () => {
-    const next: Theme = theme === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem(THEME_KEY, next);
-    } catch {
-      // Storage unavailable: the choice just isn't remembered.
-    }
-    setTheme(next);
-  };
-
-  const themeLabel = theme === 'dark' ? t.ui.themeToLight : t.ui.themeToDark;
 
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}${open ? ' is-open' : ''}`}>
@@ -87,9 +64,6 @@ export function Header() {
           </ul>
         </nav>
         <div className="header-actions">
-          <button type="button" className="icon-btn" onClick={switchTheme} title={themeLabel} aria-label={themeLabel}>
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
-          </button>
           <button type="button" className="lang-toggle" onClick={toggle} title={t.ui.languageSwitch}>
             <span className="sr-only">{t.ui.languageSwitch}</span>
             <span aria-hidden="true">
