@@ -1,0 +1,591 @@
+{
+  "meta": {
+    "lang": "fr",
+    "locale": "fr_FR",
+    "title": "Anas Atmani — Développeur Full Stack (Java · Spring Boot · React)",
+    "description": "Portfolio d'Anas Atmani, élève ingénieur en 5e année à l'EMSI Rabat et développeur Full Stack (Java, Spring Boot, React), à la recherche d'un stage PFE à Rabat, à Casablanca ou en télétravail."
+  },
+  "ui": {
+    "skipToContent": "Aller au contenu",
+    "primaryNav": "Navigation principale",
+    "languageSwitch": "Switch the site to English",
+    "languageSwitchShort": "EN",
+    "currentLanguage": "FR",
+    "opensInNewTab": "(s'ouvre dans un nouvel onglet)",
+    "pdf": "PDF",
+    "menu": "Menu",
+    "closeMenu": "Fermer le menu",
+    "close": "Fermer",
+    "backToTop": "Retour en haut",
+    "themeToLight": "Passer en thème clair",
+    "themeToDark": "Passer en thème sombre"
+  },
+  "nav": {
+    "projects": "Projets",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "certifications": "Certifications",
+    "education": "Formation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Anas Atmani",
+    "title": "Développeur Full Stack — Java · Spring Boot · React",
+    "tagline": "Élève ingénieur en 5e année à la recherche d'un stage PFE · Rabat / Casablanca / Télétravail",
+    "summary": "Élève ingénieur en 5e année à l'EMSI Rabat, orienté développement Full Stack Java / Spring Boot et React. Deux stages sur des plateformes numériques publiques marocaines (PortNet, DGI), en développement Full Stack et en automatisation des tests. Certifié Oracle Java SE 17.",
+    "photo": {
+      "src": "images/anas-atmani.webp",
+      "srcLarge": "images/anas-atmani@2x.webp",
+      "alt": "Portrait d'Anas Atmani en costume et cravate"
+    },
+    "cvLabel": "Télécharger le CV",
+    "cvFile": "cv/Atmani_Anas_CV_FR.pdf",
+    "cvDownloadName": "Anas_Atmani_CV_FR.pdf",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "emailLabel": "E-mail",
+    "availability": "Disponible pour un stage PFE",
+    "greeting": "Bonjour, je suis",
+    "projectsLabel": "Voir les projets",
+    "stats": [
+      {
+        "value": "7",
+        "label": "projets sur GitHub"
+      },
+      {
+        "value": "12",
+        "label": "certifications"
+      },
+      {
+        "value": "2",
+        "label": "stages"
+      },
+      {
+        "value": "2",
+        "label": "certifications Oracle Professional"
+      }
+    ]
+  },
+  "links": {
+    "github": "https://github.com/AtmaniAnas1",
+    "linkedin": "https://www.linkedin.com/in/anas-atmani-1b67ab355/",
+    "email": "atmanianas382@gmail.com"
+  },
+  "projects": {
+    "title": "Projets",
+    "intro": "Sept projets, chacun lancé en local pour ces captures. Code source sur GitHub.",
+    "labels": {
+      "problem": "Problème",
+      "contribution": "Ce que j'ai fait",
+      "stack": "Technologies",
+      "code": "Code",
+      "demo": "Démo",
+      "codeAria": "Code : {name} sur GitHub",
+      "demoAria": "Démo : {name}"
+    },
+    "items": [
+      {
+        "id": "relya",
+        "name": "Relya CRM",
+        "context": "TODO : projet académique ou personnel ?",
+        "period": "TODO : date",
+        "image": {
+          "src": "images/projects/relya.webp",
+          "srcSmall": "images/projects/relya-sm.webp",
+          "alt": "Tableau de bord commercial de Relya CRM : CA réalisé, CA prévisionnel pondéré, taux de conversion et de gain, CA mensuel et pipeline par étape",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Offrir à une PME un seul outil pour la prospection, les ventes, le service après-vente et le pilotage.",
+        "contribution": "Développement d'une API Spring Boot (JWT révocable, droits par rôle modifiables, notifications temps réel par WebSocket, exports PDF et Excel), d'un front end Angular avec un pipeline commercial en glisser-déposer, et d'un service FastAPI de scoring des leads par IA avec scikit-learn. 31 tests automatisés répartis sur les trois parties.",
+        "stack": [
+          "Java 17",
+          "Spring Boot 3.3",
+          "Spring Security",
+          "JWT",
+          "WebSocket",
+          "Angular 18",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "FastAPI",
+          "scikit-learn",
+          "Docker Compose"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/relya-crm",
+          "demo": null
+        }
+      },
+      {
+        "id": "portflow",
+        "name": "PortFlow",
+        "context": "Stage PortNet",
+        "period": "Juil. – Août 2025",
+        "image": {
+          "src": "images/projects/portflow.webp",
+          "srcSmall": "images/projects/portflow-sm.webp",
+          "alt": "Espace administrateur de PortFlow : comptes avec leur rôle, et demandes portuaires avec leur état",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Dématérialiser le cycle de vie d'une demande de service portuaire : soumission par l'opérateur, acceptation ou refus par la douane, notification automatique et supervision globale par un administrateur.",
+        "contribution": "Conception et développement de la plateforme web Full Stack : API REST Spring Boot en couches (contrôleur, service, repository), authentification stateless par JWT avec BCrypt et contrôle d'accès par rôle (opérateur, douane, administrateur), et un tableau de bord React par rôle.",
+        "stack": [
+          "Java 17",
+          "Spring Boot 3.5",
+          "Spring Security",
+          "JWT",
+          "Spring Data JPA",
+          "Hibernate",
+          "SQLite",
+          "React 19",
+          "React Router",
+          "Vite",
+          "Maven"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/portflow-port-requests-platform",
+          "demo": null
+        }
+      },
+      {
+        "id": "simplis",
+        "name": "SIMPL-IS",
+        "context": "Stage DGI",
+        "period": "Juil. – Août 2026",
+        "image": {
+          "src": "images/projects/simplis.webp",
+          "srcSmall": "images/projects/simplis-sm.webp",
+          "alt": "Saisie d'une déclaration SIMPL-IS : identification du contribuable, exercice, et contribution calculée en direct à partir du bénéfice net fiscal",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "S'assurer que les parcours clés de la plateforme de télédéclaration de l'impôt sur les sociétés de la DGI fonctionnent correctement, y compris en cas d'erreur.",
+        "contribution": "Développement d'une version Spring Boot / Thymeleaf des parcours clés de la plateforme (connexion avec CAPTCHA, saisie de la déclaration avec calcul en direct, workflow enregistrer → valider → déposer, espace administrateur), puis campagne de tests en quatre sprints : plan de tests fonctionnels, scénarios d'erreur (400 / 401 / 403 / 404 / 500), tests de sécurité et d'intégration. 37 tests automatisés, tous au vert, avec rapport d'exécution.",
+        "stack": [
+          "Java 17",
+          "Spring Boot",
+          "Spring Security",
+          "Spring Data JPA",
+          "Hibernate",
+          "H2",
+          "Thymeleaf",
+          "JUnit 5",
+          "Spring Boot Test",
+          "Maven"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/simpl-is",
+          "demo": null
+        }
+      },
+      {
+        "id": "fireguard",
+        "name": "FireGuard Lyon",
+        "context": "Projet académique",
+        "period": "Déc. 2024",
+        "image": {
+          "src": "images/projects/fireguard.webp",
+          "srcSmall": "images/projects/fireguard-sm.webp",
+          "alt": "Tableau de bord FireGuard Lyon : total des incidents, évolution mensuelle, répartition par type d'incendie et niveaux de risque",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Estimer le risque d'incendie dans les quartiers de Lyon à partir des incidents passés et des conditions météo, et le rendre lisible dans un seul tableau de bord.",
+        "contribution": "Développement d'un back end FastAPI et d'un tableau de bord web : modèle Random Forest + Gradient Boosting (~81 % d'exactitude) entraîné sur un jeu de données synthétique de 2 500 incidents (2022–2024), graphiques, carte Leaflet, formulaire de prédiction du risque et historique des analyses avec export PDF / CSV / JSON.",
+        "stack": [
+          "Python",
+          "FastAPI",
+          "scikit-learn",
+          "pandas",
+          "Chart.js",
+          "Leaflet",
+          "MongoDB"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/FireGuard-Lyon",
+          "demo": null
+        }
+      },
+      {
+        "id": "ecommerce",
+        "name": "Catalogue e-commerce",
+        "context": "Projet académique",
+        "period": "Nov. 2025",
+        "image": {
+          "src": "images/projects/ecommerce.webp",
+          "srcSmall": "images/projects/ecommerce-sm.webp",
+          "alt": "Page catalogue de la boutique avec filtres par recherche, catégorie et prix, et fiches produits",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Vendre des produits aux attributs variables (taille, couleur, prix et stock par variante) sans schéma de base de données rigide.",
+        "contribution": "Développement d'une boutique Flask sur MongoDB : catalogue avec recherche plein texte, variantes de produits, panier en session, commande avec contrôle des stocks, espace client et back-office d'administration (produits, catégories, commandes, utilisateurs). Mots de passe hachés avec bcrypt et routes protégées par rôle.",
+        "stack": [
+          "Python",
+          "Flask",
+          "MongoDB",
+          "PyMongo",
+          "Jinja2",
+          "bcrypt"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/ecommerce-platform",
+          "demo": null
+        }
+      },
+      {
+        "id": "parapharmacy",
+        "name": "Gestion de parapharmacie",
+        "context": "Projet académique",
+        "period": "Nov. 2025",
+        "image": {
+          "src": "images/projects/parapharmacy.webp",
+          "srcSmall": "images/projects/parapharmacy-sm.webp",
+          "alt": "Boutique en ligne de la parapharmacie : catalogue avec recherche, filtre par catégorie, prix, stock et ajout au panier",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Gérer une parapharmacie depuis une seule application : boutique en ligne, caisse, stocks et fournisseurs.",
+        "contribution": "Développement d'une application ASP.NET Core MVC avec cinq espaces par rôle (admin, gérant, caissier, fournisseur, client), une boutique en ligne avec panier et reçus imprimables, un programme de fidélité, la mise à jour automatique des stocks à chaque vente et les commandes fournisseurs avec réapprovisionnement.",
+        "stack": [
+          "C#",
+          ".NET 8",
+          "ASP.NET Core MVC",
+          "Razor",
+          "Bootstrap"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/Parapharmacie",
+          "demo": null
+        }
+      },
+      {
+        "id": "equipment",
+        "name": "Gestion de Matériel",
+        "context": "TODO : projet académique ou personnel ?",
+        "period": "TODO : date",
+        "image": {
+          "src": "images/projects/equipment.webp",
+          "srcSmall": "images/projects/equipment-sm.webp",
+          "alt": "Tableau de bord de gestion de matériel : totaux, liste du matériel avec son état (disponible, emprunté, en maintenance) et emprunts en cours avec date de retour",
+          "width": 1440,
+          "height": 900
+        },
+        "problem": "Suivre un parc de matériel partagé : ce qui existe, dans quel état, et qui a emprunté quoi.",
+        "contribution": "Développement d'une application web Django : catalogue de matériel par catégorie avec trois états (disponible, emprunté, en maintenance), emprunts de 7 jours avec date de retour, tableau de bord des emprunts en cours, page d'administration pour enregistrer les retours, Django Admin pour la gestion complète, et interface responsive Bootstrap 5 avec thème sombre.",
+        "stack": [
+          "Python",
+          "Django 5.2",
+          "SQLite",
+          "Bootstrap 5.3",
+          "Pillow"
+        ],
+        "links": {
+          "code": "https://github.com/AtmaniAnas1/gestionMateriel",
+          "demo": null
+        }
+      }
+    ]
+  },
+  "experience": {
+    "title": "Expérience",
+    "labels": {
+      "project": "Projet :",
+      "tools": "Outils"
+    },
+    "items": [
+      {
+        "role": "Stagiaire Ingénieur Logiciel — Automatisation des tests",
+        "company": "Direction Générale des Impôts (DGI)",
+        "location": "Rabat · Hybride",
+        "period": "Juil. – Août 2026",
+        "project": "Campagne de tests sur SIMPL-IS, la plateforme de télédéclaration de l'impôt sur les sociétés de la DGI (connexion, saisie de la déclaration, workflow de dépôt, espace administrateur).",
+        "tools": [
+          "Java 17",
+          "Spring Boot",
+          "Spring Data JPA",
+          "Hibernate",
+          "H2",
+          "Thymeleaf",
+          "Maven"
+        ]
+      },
+      {
+        "role": "Stagiaire Développeur Full Stack",
+        "company": "PortNet — Guichet unique national du commerce extérieur",
+        "location": "Casablanca · Hybride",
+        "period": "Juil. – Août 2025",
+        "project": "PortFlow, plateforme web de gestion des demandes de services portuaires.",
+        "tools": [
+          "Java 17",
+          "Spring Boot 3.5",
+          "Spring Security",
+          "JWT",
+          "BCrypt",
+          "Spring Data JPA",
+          "Hibernate",
+          "React 19",
+          "Vite",
+          "Maven",
+          "Git"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Compétences",
+    "groups": [
+      {
+        "name": "Back end",
+        "items": [
+          "Spring Boot",
+          "Spring Security (JWT)",
+          "Spring Data JPA / Hibernate",
+          "Thymeleaf",
+          "FastAPI",
+          "Laravel"
+        ]
+      },
+      {
+        "name": "Front end et mobile",
+        "items": [
+          "React",
+          "React Native",
+          "Vite",
+          "HTML/CSS"
+        ]
+      },
+      {
+        "name": "Bases de données",
+        "items": [
+          "SQL",
+          "PL/SQL",
+          "MySQL",
+          "Oracle",
+          "MongoDB",
+          "H2",
+          "SQLite"
+        ]
+      },
+      {
+        "name": "Qualité",
+        "items": [
+          "Automatisation des tests",
+          "Plan de tests",
+          "Tests des cas d'erreur (4xx / 5xx)"
+        ]
+      },
+      {
+        "name": "Outils et méthodes",
+        "items": [
+          "Git",
+          "Maven",
+          "Linux",
+          "Agile / Scrum",
+          "UML"
+        ]
+      },
+      {
+        "name": "Langages de programmation",
+        "items": [
+          "Java",
+          "Python",
+          "C",
+          "C++",
+          "C#",
+          "JavaScript",
+          "TypeScript",
+          "PHP"
+        ]
+      },
+      {
+        "name": "Langues",
+        "items": [
+          "Arabe — Langue maternelle",
+          "Anglais — Courant",
+          "Français — Intermédiaire"
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "intro": "12 certificats. Cliquez pour agrandir, ou vérifiez-les sur le site de l'organisme.",
+    "labels": {
+      "verify": "Vérifier",
+      "verifyAria": "Vérifier : {name}",
+      "all": "Tous",
+      "oracle": "Oracle",
+      "coursera": "Coursera",
+      "filterAria": "Filtrer les certifications",
+      "enlarge": "Agrandir le certificat : {name}"
+    },
+    "items": [
+      {
+        "name": "Oracle Certified Professional: Java SE 17 Developer",
+        "issuer": "Oracle",
+        "group": "oracle",
+        "date": "Sept. 2026",
+        "image": {
+          "src": "images/certificates/oracle-java-se-17.webp",
+          "srcLarge": "images/certificates/oracle-java-se-17-lg.webp",
+          "alt": "Certificat Oracle Certified Professional: Java SE 17 Developer, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=8C5071F24375000E6714E0F8AC91D27636AC02C8C322AEF6CD7A64C1A3152CDB"
+      },
+      {
+        "name": "Oracle Autonomous AI Database Certified Professional",
+        "issuer": "Oracle",
+        "group": "oracle",
+        "date": "Sept. 2026",
+        "image": {
+          "src": "images/certificates/oracle-autonomous-ai-database.webp",
+          "srcLarge": "images/certificates/oracle-autonomous-ai-database-lg.webp",
+          "alt": "Certificat Oracle Certified Professional: Autonomous AI Database, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=BDBBE7208F8F5DF13E3447B3F4CB16C4C4218814A2B958928A9E75D894856202"
+      },
+      {
+        "name": "Introduction to Big Data",
+        "issuer": "UC San Diego · Coursera",
+        "group": "coursera",
+        "date": "Avr. 2026",
+        "image": {
+          "src": "images/certificates/ucsd-big-data.webp",
+          "srcLarge": "images/certificates/ucsd-big-data-lg.webp",
+          "alt": "Certificat de cours Coursera: Introduction to Big Data, UC San Diego, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/ANQZSGG2XAZF"
+      },
+      {
+        "name": "Agile Project Management",
+        "issuer": "Google · Coursera",
+        "group": "coursera",
+        "date": "Mars 2026",
+        "image": {
+          "src": "images/certificates/google-agile.webp",
+          "srcLarge": "images/certificates/google-agile-lg.webp",
+          "alt": "Certificat de cours Coursera: Agile Project Management, Google, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/E981UKCSE46I"
+      },
+      {
+        "name": "React Basics",
+        "issuer": "Meta · Coursera",
+        "group": "coursera",
+        "date": "Déc. 2025",
+        "image": {
+          "src": "images/certificates/meta-react-basics.webp",
+          "srcLarge": "images/certificates/meta-react-basics-lg.webp",
+          "alt": "Certificat de cours Coursera: React Basics, Meta, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/N3M56E9TZFY8"
+      },
+      {
+        "name": "React Native",
+        "issuer": "Meta · Coursera",
+        "group": "coursera",
+        "date": "Déc. 2025",
+        "image": {
+          "src": "images/certificates/meta-react-native.webp",
+          "srcLarge": "images/certificates/meta-react-native-lg.webp",
+          "alt": "Certificat de cours Coursera: React Native, Meta, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/5A8WUJ5H1830"
+      },
+      {
+        "name": "Python for Data Science, AI & Development",
+        "issuer": "IBM · Coursera",
+        "group": "coursera",
+        "date": "Avr. 2025",
+        "image": {
+          "src": "images/certificates/ibm-python.webp",
+          "srcLarge": "images/certificates/ibm-python-lg.webp",
+          "alt": "Certificat de cours Coursera: Python for Data Science, AI & Development, IBM, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/6CIJ7JSCVF7N"
+      },
+      {
+        "name": "Software Engineering: Software Design and Project Management",
+        "issuer": "HKUST · Coursera",
+        "group": "coursera",
+        "date": "Avr. 2025",
+        "image": {
+          "src": "images/certificates/hkust-software-engineering.webp",
+          "srcLarge": "images/certificates/hkust-software-engineering-lg.webp",
+          "alt": "Certificat de cours Coursera: Software Engineering: Software Design and Project Management, HKUST, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/SD8AOVVLP6NS"
+      },
+      {
+        "name": "La recherche documentaire",
+        "issuer": "École Polytechnique · Coursera",
+        "group": "coursera",
+        "date": "Avr. 2025",
+        "image": {
+          "src": "images/certificates/polytechnique-recherche-documentaire.webp",
+          "srcLarge": "images/certificates/polytechnique-recherche-documentaire-lg.webp",
+          "alt": "Certificat de cours Coursera: La recherche documentaire, École Polytechnique, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/NX6FZQJJAHAY"
+      },
+      {
+        "name": "The Unix Workbench",
+        "issuer": "Johns Hopkins University · Coursera",
+        "group": "coursera",
+        "date": "Déc. 2024",
+        "image": {
+          "src": "images/certificates/jhu-unix-workbench.webp",
+          "srcLarge": "images/certificates/jhu-unix-workbench-lg.webp",
+          "alt": "Certificat de cours Coursera: The Unix Workbench, Johns Hopkins University, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/8A66NQ2NRQ5X"
+      },
+      {
+        "name": "Interactivity with JavaScript",
+        "issuer": "University of Michigan · Coursera",
+        "group": "coursera",
+        "date": "Déc. 2024",
+        "image": {
+          "src": "images/certificates/umich-javascript.webp",
+          "srcLarge": "images/certificates/umich-javascript-lg.webp",
+          "alt": "Certificat de cours Coursera: Interactivity with JavaScript, University of Michigan, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/Z9EP7HUTACNX"
+      },
+      {
+        "name": "Introduction à la programmation orientée objet (en C++)",
+        "issuer": "EPFL · Coursera",
+        "group": "coursera",
+        "date": "Déc. 2024",
+        "image": {
+          "src": "images/certificates/epfl-cpp-oop.webp",
+          "srcLarge": "images/certificates/epfl-cpp-oop-lg.webp",
+          "alt": "Certificat de cours Coursera: Introduction à la programmation orientée objet (en C++), EPFL, décerné à Anas Atmani"
+        },
+        "verifyUrl": "https://coursera.org/verify/LHUE85B383KZ"
+      }
+    ]
+  },
+  "education": {
+    "title": "Formation",
+    "items": [
+      {
+        "school": "École Marocaine des Sciences de l'Ingénieur (EMSI) — Rabat",
+        "program": "Cycle ingénieur — Développement Digital des Systèmes Informatiques",
+        "period": "Oct. 2022 – 2027"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "text": "Vous cherchez un stagiaire PFE en développement Full Stack ? Je serais ravi d'en discuter.",
+    "emailLabel": "E-mail",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub"
+  },
+  "footer": {
+    "text": "© 2026 Anas Atmani"
+  }
+}
