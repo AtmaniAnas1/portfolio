@@ -1,6 +1,6 @@
 /* ---------- Tokens ---------- */
 :root {
-  --bg: #f6f7fb;
+  --bg: #f5f7f5;
   --bg-2: #eef0f7;
   --surface: #ffffff;
   --surface-2: #f8f9fc;
@@ -8,11 +8,11 @@
   --muted: #535c70;
   --faint: #8a92a6;
   --border: #e2e5ee;
-  --accent: #4f46e5;
-  --accent-2: #0ea5e9;
-  --accent-text: #4338ca;
+  --accent: #008d36;
+  --accent-2: #00b36b;
+  --accent-text: #007a2f;
   --accent-contrast: #ffffff;
-  --accent-soft: #eef0ff;
+  --accent-soft: #e6f5ec;
   --tag-bg: #f1f3f9;
   --tag-text: #3b4256;
   --ok: #16a34a;
@@ -21,67 +21,68 @@
   --shadow-sm: 0 1px 2px rgb(15 20 34 / 0.05);
   --shadow: 0 1px 2px rgb(15 20 34 / 0.04), 0 8px 24px -8px rgb(15 20 34 / 0.12);
   --shadow-lg: 0 2px 4px rgb(15 20 34 / 0.04), 0 24px 48px -16px rgb(15 20 34 / 0.22);
-  --header-bg: rgb(246 247 251 / 0.75);
+  --header-bg: rgb(245 247 245 / 0.78);
   --grid: rgb(15 20 34 / 0.045);
   --radius: 16px;
   --radius-sm: 10px;
   --max: 1160px;
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
-  --gradient: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
+  --gradient: linear-gradient(120deg, #006f2a 0%, #00a346 100%);
+  --emsi-red: #d73f16;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #0a0d14;
-    --bg-2: #0e121b;
-    --surface: #121722;
-    --surface-2: #161c29;
+    --bg: #080d0b;
+    --bg-2: #0c1310;
+    --surface: #111a16;
+    --surface-2: #15201b;
     --text: #e9ecf3;
     --muted: #a3abbd;
     --faint: #6f7890;
-    --border: #232a3a;
-    --accent: #818cf8;
-    --accent-2: #38bdf8;
-    --accent-text: #a5b4fc;
+    --border: #22312a;
+    --accent: #2fbf62;
+    --accent-2: #6be39a;
+    --accent-text: #5fd88a;
     --accent-contrast: #0a0d14;
-    --accent-soft: #1b1f3b;
-    --tag-bg: #1a2030;
+    --accent-soft: #0f2a1b;
+    --tag-bg: #17241e;
     --tag-text: #c3c9d8;
     --todo-bg: #4a3a00;
     --todo-text: #ffe58a;
     --shadow-sm: none;
     --shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 12px 32px -12px rgb(0 0 0 / 0.6);
     --shadow-lg: 0 24px 60px -20px rgb(0 0 0 / 0.75);
-    --header-bg: rgb(10 13 20 / 0.72);
+    --header-bg: rgb(8 13 11 / 0.74);
     --grid: rgb(255 255 255 / 0.035);
     color-scheme: dark;
   }
 }
 
 :root[data-theme='dark'] {
-  --bg: #0a0d14;
-  --bg-2: #0e121b;
-  --surface: #121722;
-  --surface-2: #161c29;
+  --bg: #080d0b;
+  --bg-2: #0c1310;
+  --surface: #111a16;
+  --surface-2: #15201b;
   --text: #e9ecf3;
   --muted: #a3abbd;
   --faint: #6f7890;
-  --border: #232a3a;
-  --accent: #818cf8;
-  --accent-2: #38bdf8;
-  --accent-text: #a5b4fc;
+  --border: #22312a;
+  --accent: #2fbf62;
+  --accent-2: #6be39a;
+  --accent-text: #5fd88a;
   --accent-contrast: #0a0d14;
-  --accent-soft: #1b1f3b;
-  --tag-bg: #1a2030;
+  --accent-soft: #0f2a1b;
+  --tag-bg: #17241e;
   --tag-text: #c3c9d8;
   --todo-bg: #4a3a00;
   --todo-text: #ffe58a;
   --shadow-sm: none;
   --shadow: 0 1px 0 rgb(255 255 255 / 0.03) inset, 0 12px 32px -12px rgb(0 0 0 / 0.6);
   --shadow-lg: 0 24px 60px -20px rgb(0 0 0 / 0.75);
-  --header-bg: rgb(10 13 20 / 0.72);
+  --header-bg: rgb(8 13 11 / 0.74);
   --grid: rgb(255 255 255 / 0.035);
   color-scheme: dark;
 }
@@ -1262,5 +1263,227 @@ main:focus {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* ---------- EMSI identity ---------- */
+.hero-watermark {
+  position: absolute;
+  right: -2vw;
+  bottom: 60px;
+  margin: 0;
+  font-size: clamp(9rem, 26vw, 24rem);
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--accent) 16%, transparent);
+  user-select: none;
+  pointer-events: none;
+}
+.brand-mark {
+  position: relative;
+}
+.brand-mark::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 8px;
+  height: 8px;
+  background: var(--emsi-red);
+  border: 2px solid var(--bg);
+}
+.school-card {
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 92vw;
+  padding: 10px 16px 10px 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+}
+.school-logo,
+.edu-logo {
+  display: grid;
+  place-items: center;
+  flex: none;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #e3e8e4;
+}
+.school-logo {
+  width: 108px;
+  height: 44px;
+  padding: 6px 8px;
+}
+.school-logo img,
+.edu-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.school-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.school-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.school-label strong {
+  color: var(--accent-text);
+}
+.school-detail {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.edu-logo {
+  width: 170px;
+  height: 64px;
+  padding: 8px 12px;
+}
+
+/* ---------- Phone ---------- */
+.socials {
+  align-items: center;
+  flex-wrap: wrap;
+}
+.phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+.phone-link:hover {
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+/* ---------- CV menu ---------- */
+.cv-menu {
+  position: relative;
+}
+.chev {
+  display: inline-grid;
+  margin-left: -2px;
+  transition: transform 0.2s ease;
+}
+.chev.is-open {
+  transform: rotate(180deg);
+}
+.cv-popover {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 10px);
+  left: 0;
+  width: min(380px, calc(100vw - 32px));
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  animation: pop 0.16s ease;
+}
+.cv-popover[hidden] {
+  display: none;
+}
+.cv-popover-title {
+  padding: 6px 10px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+.cv-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--text);
+}
+.cv-option:hover,
+.cv-option:focus-visible {
+  background: var(--accent-soft);
+}
+.cv-option > .icon {
+  color: var(--faint);
+}
+.cv-option:hover > .icon {
+  color: var(--accent-text);
+}
+.cv-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.cv-lang {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  padding: 1px 4px;
+  border-radius: 5px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+.cv-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 1.3;
+}
+.cv-label {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.cv-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 960px) {
+  .school-card {
+    bottom: -40px;
+  }
+  .hero-visual {
+    margin-bottom: 40px;
+  }
+  .hero-watermark {
+    bottom: auto;
+    top: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .school-detail {
+    display: none;
+  }
+  .edu-logo {
+    width: 150px;
   }
 }

@@ -67,14 +67,21 @@ for (const [from, to, { width, height, position = 'top', extract, fit = 'cover',
   console.log(`ok  ${to}`);
 }
 
-// CVs: design versions are the downloadable files.
-for (const lang of ['EN', 'FR']) {
-  copyFileSync(src(`cv/Atmani_Anas_CV_${lang}.pdf`), out(`cv/Atmani_Anas_CV_${lang}.pdf`));
-  console.log(`ok  cv/Atmani_Anas_CV_${lang}.pdf`);
+// CVs: design and ATS versions, in English and French, all downloadable from the hero.
+for (const kind of ['', 'ATS_']) {
+  for (const lang of ['EN', 'FR']) {
+    const file = `cv/Atmani_Anas_CV_${kind}${lang}.pdf`;
+    copyFileSync(src(file), out(file));
+    console.log(`ok  ${file}`);
+  }
 }
 
+// EMSI logo (transparent PNG) for the education section and the hero school badge.
+await sharp(src('emsi/emsi-logo-src.png')).resize({ width: 600 }).webp({ quality: 90, alphaQuality: 100 }).toFile(out('images/emsi-logo.webp'));
+console.log('ok  images/emsi-logo.webp');
+
 // Favicons and Open Graph image, drawn from an SVG monogram.
-const accent = '#1f56c8';
+const accent = '#008d36';
 const monogram = (size) =>
   Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="${accent}"/>
@@ -92,7 +99,7 @@ const og = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" hei
   <rect width="1200" height="630" fill="#0e1116"/>
   <rect x="0" y="0" width="12" height="630" fill="${accent}"/>
   <text x="440" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="68" font-weight="700" fill="#ffffff">Anas Atmani</text>
-  <text x="440" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#84a9ff">Full Stack Developer</text>
+  <text x="440" y="320" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="600" fill="#3ddc84">Full Stack Developer</text>
   <text x="440" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#c9ced8">Java · Spring Boot · React</text>
   <text x="440" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="26" fill="#a2a9b5">PFE internship · Rabat / Casablanca / Remote</text>
 </svg>`);

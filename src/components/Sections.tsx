@@ -153,8 +153,8 @@ export function Education() {
     <Section id="education" index="05" title={t.education.title}>
       {t.education.items.map((e) => (
         <Reveal key={e.school} className="card edu">
-          <span className="edu-icon" aria-hidden="true">
-            <Icon name="cap" size={26} />
+          <span className="edu-logo">
+            <img src={asset('images/emsi-logo.webp')} alt={t.hero.school.logoAlt} width="600" height="162" loading="lazy" />
           </span>
           <div>
             <div className="job-head">
@@ -188,6 +188,12 @@ export function Contact() {
             {links.email}
           </a>
           <ul className="contact-list">
+            <li>
+              <a className="contact-item" href={`tel:${links.phone}`}>
+                <Icon name="phone" />
+                {links.phoneDisplay}
+              </a>
+            </li>
             <li>
               <ExternalLink className="contact-item" href={links.linkedin}>
                 <Icon name="linkedin" />

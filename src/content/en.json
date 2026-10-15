@@ -39,8 +39,6 @@
       "alt": "Portrait of Anas Atmani in a suit and tie"
     },
     "cvLabel": "Download CV",
-    "cvFile": "cv/Atmani_Anas_CV_EN.pdf",
-    "cvDownloadName": "Anas_Atmani_CV_EN.pdf",
     "githubLabel": "GitHub",
     "linkedinLabel": "LinkedIn",
     "emailLabel": "Email",
@@ -64,12 +62,52 @@
         "value": "2",
         "label": "Oracle Professional certifications"
       }
-    ]
+    ],
+    "cvMenuTitle": "Choose a version",
+    "cvs": [
+      {
+        "label": "CV — English",
+        "note": "Designed version, with photo",
+        "file": "cv/Atmani_Anas_CV_EN.pdf",
+        "downloadName": "Anas_Atmani_CV_EN.pdf",
+        "lang": "EN"
+      },
+      {
+        "label": "CV — French",
+        "note": "Designed version, with photo",
+        "file": "cv/Atmani_Anas_CV_FR.pdf",
+        "downloadName": "Anas_Atmani_CV_FR.pdf",
+        "lang": "FR"
+      },
+      {
+        "label": "ATS CV — English",
+        "note": "Plain layout, read by applicant tracking systems",
+        "file": "cv/Atmani_Anas_CV_ATS_EN.pdf",
+        "downloadName": "Anas_Atmani_CV_ATS_EN.pdf",
+        "lang": "EN"
+      },
+      {
+        "label": "ATS CV — French",
+        "note": "Plain layout, read by applicant tracking systems",
+        "file": "cv/Atmani_Anas_CV_ATS_FR.pdf",
+        "downloadName": "Anas_Atmani_CV_ATS_FR.pdf",
+        "lang": "FR"
+      }
+    ],
+    "phoneLabel": "Phone",
+    "school": {
+      "label": "Engineering student",
+      "name": "EMSI Rabat",
+      "detail": "5th year · Computer Systems and Digital Development",
+      "logoAlt": "Logo of the École Marocaine des Sciences de l'Ingénieur (EMSI)"
+    }
   },
   "links": {
     "github": "https://github.com/AtmaniAnas1",
     "linkedin": "https://www.linkedin.com/in/anas-atmani-1b67ab355/",
-    "email": "atmanianas382@gmail.com"
+    "email": "atmanianas382@gmail.com",
+    "phone": "+212689712802",
+    "phoneDisplay": "+212 689 712 802"
   },
   "projects": {
     "title": "Projects",
@@ -583,9 +621,11 @@
     "text": "Looking for a PFE intern in full stack development? I'd be glad to talk.",
     "emailLabel": "Email",
     "linkedinLabel": "LinkedIn",
-    "githubLabel": "GitHub"
+    "githubLabel": "GitHub",
+    "phoneLabel": "Phone"
   },
   "footer": {
-    "text": "© 2026 Anas Atmani"
+    "text": "© 2026 Anas Atmani",
+    "school": "Engineering student at EMSI Rabat"
   }
 }

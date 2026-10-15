@@ -25,7 +25,9 @@ export default function App() {
       </main>
       <footer className="site-footer">
         <div className="container footer-inner">
-          <span>{t.footer.text}</span>
+          <span>
+            {t.footer.text} · {t.footer.school}
+          </span>
           <a className="link-btn" href="#top">
             {t.ui.backToTop}
             <Icon name="arrowUp" size={16} />
