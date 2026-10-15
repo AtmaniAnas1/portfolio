@@ -72,16 +72,28 @@ export function Hero() {
           </div>
           <ul className="hero-links">
             <li>
-              <a href={`mailto:${links.email}`}>{links.email}</a>
+              <a href={`mailto:${links.email}`}>
+                <Icon name="mail" size={17} />
+                {links.email}
+              </a>
             </li>
             <li>
-              <a href={`tel:${links.phone}`}>{links.phoneDisplay}</a>
+              <a href={`tel:${links.phone}`}>
+                <Icon name="phone" size={17} />
+                {links.phoneDisplay}
+              </a>
             </li>
             <li>
-              <ExternalLink href={links.linkedin}>{hero.linkedinLabel}</ExternalLink>
+              <ExternalLink href={links.linkedin}>
+                <Icon name="linkedin" size={16} />
+                {hero.linkedinLabel}
+              </ExternalLink>
             </li>
             <li>
-              <ExternalLink href={links.github}>{hero.githubLabel}</ExternalLink>
+              <ExternalLink href={links.github}>
+                <Icon name="github" size={17} />
+                {hero.githubLabel}
+              </ExternalLink>
             </li>
           </ul>
         </div>
